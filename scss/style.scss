@@ -39,6 +39,7 @@
    background-color: #000000e6;
    z-index: 3;
    width: 100%;
+   box-shadow: 0px 4px 12px 1px $main-color;
    &__row {
       display: flex;
       text-align: center;
