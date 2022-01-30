@@ -1,0 +1,462 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "KronaOne";
+  src: url("../fonts/KronaOne-Regular.eot");
+  src: local("☺"), url("../fonts/KronaOne-Regular.woff") format("woff"), url("../fonts/KronaOne-Regular.ttf") format("truetype"), url("../fonts/KronaOne-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Bold.eot");
+  src: local("☺"), url("../fonts/Rubik-Bold.woff") format("woff"), url("../fonts/Rubik-Bold.ttf") format("truetype"), url("../fonts/Rubik-Bold.svg") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Regular.eot");
+  src: local("☺"), url("../fonts/Rubik-Regular.woff") format("woff"), url("../fonts/Rubik-Regular.ttf") format("truetype"), url("../fonts/Rubik-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-size: 14px;
+  color: #000;
+  font-family: "Rubik";
+  font-weight: 700;
+}
+html._lock,
+body._lock {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000000cc;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.8s ease 0s;
+}
+
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup.open .popup_content {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.popup_area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.popup_body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10px;
+}
+
+.popup_content {
+  background-color: #ffffff;
+  color: #000000;
+  width: 330px;
+  padding: 40px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+  transform: translate(0px, -100%);
+}
+
+.popup_close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: 0.2s;
+}
+.popup_close:hover {
+  transform: rotate(90deg);
+  transition: 0.2s;
+}
+
+.popup_title {
+  margin-bottom: 15px;
+  font-family: "Rubik";
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+
+.popup_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field {
+  background-color: #f6f6f6;
+  margin-bottom: 10px;
+  line-height: 2.5rem;
+  padding-left: 10px;
+  border: 1px solid #e3e2e7;
+  color: #79787f;
+  transition: all 0.6s ease;
+}
+.form-field:focus {
+  border-color: #3c54c0;
+  color: #79787f;
+  transition: all 0.6s ease;
+  outline: none;
+}
+
+.form-field-textarea {
+  background-color: #f6f6f6;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #e3e2e7;
+  color: #79787f;
+  resize: none;
+  transition: all 0.6s ease;
+}
+.form-field-textarea:focus {
+  border-color: #3c54c0;
+  transition: all 0.6s ease;
+  outline: none;
+}
+
+.form-button {
+  background-color: #3c54c0;
+  width: 100%;
+  line-height: 32px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "Rubik";
+  letter-spacing: 1px;
+  transition: 0.4s ease-out;
+}
+.form-button:hover {
+  background-color: #1e1d24;
+  transition: 0.4s ease-out;
+}
+
+.ibg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.ibg img {
+  display: none;
+}
+
+.ibg img {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  position: absolute;
+  background-color: #000000e6;
+  z-index: 3;
+  width: 100%;
+}
+.header__row {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  height: 80px;
+}
+.header__menu {
+  flex: 0 1 33.333%;
+  order: 0;
+}
+.header__logo {
+  flex: 0 1 33.333%;
+  font-family: "KronaOne";
+  color: #3c54c0;
+  font-size: 33px;
+  letter-spacing: 1.3px;
+  order: 1;
+}
+.header__logo span {
+  color: #ffffff;
+}
+.header__contact {
+  display: flex;
+  flex: 0 1 33.333%;
+  order: 2;
+  justify-content: flex-end;
+}
+.header__contact img {
+  display: none;
+}
+.header__contact a {
+  color: #ffffff;
+  line-height: 14px;
+  padding: 15px 20px 15px 20px;
+  border: solid 2px #ffffff;
+  transition: 0.3s ease-in;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+.header__contact a:hover {
+  background-color: #3c54c0;
+  transition: 0.3s ease-in;
+  border: solid 2px #3c54c0;
+}
+@media (max-width: 1100px) {
+  .header__row {
+    height: 65px;
+  }
+  .header__menu {
+    flex: 0 1 40%;
+    font-size: 12px;
+  }
+  .header__menu.flex {
+    flex: 0 1 50%;
+  }
+  .header__logo {
+    flex: 0 1 30%;
+    font-size: 28px;
+    z-index: 5;
+  }
+  .header__logo.flex {
+    flex: 0 1 50%;
+  }
+  .header__contact {
+    flex: 0 1 30%;
+  }
+  .header__contact a {
+    padding: 10px 15px 10px 15px;
+    font-size: 12px;
+  }
+  .header__contact._none {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  .header__menu {
+    order: 3;
+    flex: 0 1 15%;
+  }
+  .header__contact {
+    flex: 0 1 25%;
+    order: 0;
+    justify-content: flex-start;
+  }
+  .header__logo {
+    flex: 0 1 60%;
+  }
+}
+@media (max-width: 650px) {
+  .header__contact {
+    flex: 0 1 15%;
+  }
+  .header__contact span {
+    display: none;
+  }
+  .header__contact img {
+    display: block;
+  }
+  .header__contact a {
+    padding: 0px;
+    border: none;
+  }
+  .header__contact a:hover {
+    background-color: transparent;
+    border: none;
+  }
+  .header__logo {
+    flex: 0 1 70%;
+    font-size: 22px;
+  }
+}
+.header .menu {
+  position: relative;
+}
+.header .menu__list {
+  display: flex;
+}
+.header .menu__list li {
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  margin: 0px 13px 0px 13px;
+}
+.header .menu__list li:first-child {
+  margin: 0px 13px 0px 0px;
+}
+.header .menu__link {
+  color: #ffffff;
+  transition: 0.3s ease-in;
+}
+.header .menu__link:hover {
+  color: #3c54c0;
+  transition: 0.3s ease-in;
+}
+@media (max-width: 900px) {
+  .header .menu__body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    padding: 150px 0px 0px 0px;
+    transform: translate3d(100%, 0px, 0px);
+    transition-duration: 0.3s, 0s;
+  }
+  .header .menu__body.active {
+    transform: translate3d(0px, 0px, 0px);
+  }
+  .header .menu__list {
+    display: block;
+    text-align: left !important;
+    position: relative;
+  }
+  .header .menu__list li {
+    margin: 0px 0px 20px 30px !important;
+    font-size: 20px;
+  }
+  .header .menu__list:after {
+    content: "";
+    height: 120%;
+    width: 2px;
+    background-color: #3c54c0;
+    position: absolute;
+    top: -10%;
+    right: 50%;
+  }
+}
+@media (max-width: 900px) {
+  .header .icon-menu {
+    display: block;
+    position: absolute;
+    top: -10px;
+    right: 5px;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 5;
+  }
+  .header .icon-menu span {
+    transition-duration: 0.3s, 0s;
+    top: 8px;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+  }
+  .header .icon-menu span:first-child {
+    top: 0px;
+  }
+  .header .icon-menu span:last-child {
+    top: auto;
+    bottom: 0px;
+  }
+  .header .icon-menu.active span {
+    transform: scale(0);
+    background-color: #ffffff;
+  }
+  .header .icon-menu.active span:first-child {
+    transform: rotate(-45deg);
+    top: 8px;
+  }
+  .header .icon-menu.active span:last-child {
+    transform: rotate(45deg);
+    bottom: 8px;
+  }
+}
+
+.main-screen {
+  flex: 1 0 100%;
+  position: relative;
+}
+.main-screen__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
