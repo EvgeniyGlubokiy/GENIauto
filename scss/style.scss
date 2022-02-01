@@ -173,6 +173,9 @@
             }
          }
       }
+      &__phone {
+         display: none;
+      }
 
       &__link {
          color: #ffffff;
@@ -213,7 +216,17 @@
                background-color: $main-color;
                position: absolute;
                top: -10%;
-               right: 50%;
+               right: 40%;
+            }
+         }
+         &__phone {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            font-size: 14px;
+            a {
+               color: #ffffff;
+               padding: 10px 0px 10px 25px;
             }
          }
       }

@@ -467,6 +467,9 @@ body._lock {
 .header .menu__list li:first-child {
   margin: 0px 13px 0px 0px;
 }
+.header .menu__phone {
+  display: none;
+}
 .header .menu__link {
   color: #ffffff;
   -webkit-transition: 0.3s ease-in;
@@ -515,7 +518,22 @@ body._lock {
     background-color: #3c54c0;
     position: absolute;
     top: -10%;
-    right: 50%;
+    right: 40%;
+  }
+  .header .menu__phone {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: left;
+    font-size: 14px;
+  }
+  .header .menu__phone a {
+    color: #ffffff;
+    padding: 10px 0px 10px 25px;
   }
 }
 @media (max-width: 900px) {
