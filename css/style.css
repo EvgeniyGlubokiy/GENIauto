@@ -94,6 +94,7 @@ body._lock {
   -webkit-transition: all 0.8s ease 0s;
   -o-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
+  z-index: 20;
 }
 
 .popup.open {
@@ -248,13 +249,10 @@ body._lock {
 }
 
 .ibg {
+  background-image: url(../img/img/car-6582567_1920.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  position: relative;
-}
-.ibg img {
-  display: none;
 }
 
 .ibg img {
@@ -284,7 +282,7 @@ body._lock {
 
 .header {
   position: fixed;
-  background-color: #000000e6;
+  background-color: #161822e6;
   z-index: 3;
   width: 100%;
   -webkit-box-shadow: 0px 4px 12px 1px #3c54c0;
@@ -631,22 +629,125 @@ body._lock {
   top: 0;
 }
 .main-screen__text {
+  text-align: center;
   color: white;
-  padding: 0px auto;
-  font-size: 20px;
-  margin-top: calc(300px + -100 * ((100vw - 320px) / 1120));
+  margin-top: calc(135px + 65 * ((100vw - 320px) / 1120));
 }
 .main-screen__text h1 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
+  font-size: 40px;
   background-color: #000000e6;
-  text-align: center;
 }
 .main-screen__text h1 span {
   font-family: "KronaOne";
-}
-.main-screen__text h1 :first-child {
   color: #3c54c0;
+}
+.main-screen__text h2 {
+  font-size: 40px;
+  margin: 0 auto;
+  background-color: #000000e6;
+}
+
+.benefits__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0px 20px 0px;
+}
+.benefits__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  padding: 0px 15px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  text-align: center;
+}
+.benefits__column::after {
+  content: "";
+  width: 2px;
+  height: 75px;
+  background-color: #3c54c0;
+  position: absolute;
+  bottom: 15%;
+  right: 0px;
+}
+.benefits__column:first-child::before {
+  content: "";
+  width: 2px;
+  height: 75px;
+  background-color: #3c54c0;
+  position: absolute;
+  bottom: 15%;
+  left: 0px;
+}
+.benefits__column span:first-child {
+  font-size: 35px;
+  font-weight: 700;
+}
+.benefits__column span:last-child {
+  font-size: 20px;
+  font-weight: normal;
+}
+@media (max-width: 1000px) {
+  .benefits__column span:first-child {
+    font-size: 25px;
+  }
+  .benefits__column span:last-child {
+    font-size: 18px;
+  }
+}
+@media (max-width: 800px) {
+  .benefits__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+  .benefits__column {
+    position: relative;
+    margin: 0px 0 30px 0px;
+    width: 70%;
+  }
+  .benefits__column:last-child {
+    margin: 0px 0px 0px 0px;
+  }
+  .benefits__column::after {
+    content: "";
+    width: 140px;
+    height: 2px;
+    background-color: #3c54c0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -70px;
+    margin-bottom: -15px;
+  }
+  .benefits__column::before {
+    display: none;
+  }
+  .benefits__column:last-child::after {
+    display: none;
+  }
 }
