@@ -411,8 +411,13 @@
       }
       &__column {
          position: relative;
-         margin: 0px 0 30px 0px;
+         margin: 0px 0 50px 0px;
          width: 70%;
+         span {
+            &:first-child {
+               margin-bottom: 10px;
+            }
+         }
          &:last-child {
             margin: 0px 0px 0px 0px;
          }
@@ -425,7 +430,7 @@
             bottom: 0;
             left: 50%;
             margin-left: -70px;
-            margin-bottom: -15px;
+            margin-bottom: -25px;
          }
          &::before {
             display: none;

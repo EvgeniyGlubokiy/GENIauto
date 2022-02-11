@@ -727,8 +727,11 @@ body._lock {
   }
   .benefits__column {
     position: relative;
-    margin: 0px 0 30px 0px;
+    margin: 0px 0 50px 0px;
     width: 70%;
+  }
+  .benefits__column span:first-child {
+    margin-bottom: 10px;
   }
   .benefits__column:last-child {
     margin: 0px 0px 0px 0px;
@@ -742,7 +745,7 @@ body._lock {
     bottom: 0;
     left: 50%;
     margin-left: -70px;
-    margin-bottom: -15px;
+    margin-bottom: -25px;
   }
   .benefits__column::before {
     display: none;
