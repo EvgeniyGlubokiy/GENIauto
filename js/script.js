@@ -117,7 +117,7 @@ $('.icon-menu').click(function (event) {
    $('.header__contact').toggleClass('_none');
    $('.header__logo',).toggleClass('flex');
    $('.header__menu').toggleClass('flex');
-
+   $('.header').toggleClass('active');
 });
 
 //========================================
