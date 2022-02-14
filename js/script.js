@@ -121,3 +121,13 @@ $('.icon-menu').click(function (event) {
 });
 
 //========================================
+
+
+
+
+//accordeon====================
+$(document).ready(function () {
+   $('.content').click(function () {
+      $(this).next('.content__accordeon').slideToggle();
+   });
+});
