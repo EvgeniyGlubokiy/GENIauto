@@ -255,16 +255,6 @@ body._lock {
   background-repeat: no-repeat;
 }
 
-.ibg img {
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  visibility: hidden;
-}
-
 .page {
   position: absolute;
   width: 100%;
@@ -828,6 +818,7 @@ body._lock {
       -ms-flex-align: center;
           align-items: center;
   min-height: 90px;
+  cursor: pointer;
 }
 .section__content {
   width: calc(50% - 2rem);
@@ -848,12 +839,18 @@ body._lock {
 .section .content__accordeon {
   display: none;
 }
+.section .content__accordeon p {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
 
 .bead {
   position: absolute;
   display: block;
-  height: 1rem;
   width: 1rem;
+  height: 1rem;
+  font-size: 30px;
+  line-height: 45px;
   border-radius: 50%;
   background-color: #fff;
   -webkit-box-shadow: 0px 0px 11px 3px #3c54c0;
@@ -867,6 +864,23 @@ body._lock {
 
 .content {
   margin-bottom: 30px;
+  border-radius: 20px;
+  padding: 15px 15px 0px;
+  background-color: #fff;
+  position: relative;
+}
+.content span {
+  width: 50px;
+  padding-top: 5px;
+  height: 50px;
+  background-color: #3c54c0;
+  border-radius: 50%;
+  text-align: center;
+  font-family: "KronaOne";
+  font-size: 40px;
+  position: absolute;
+  top: calc(50% - 25px);
+  left: 20px;
 }
 .content h2 {
   font-size: 18px;
@@ -874,8 +888,23 @@ body._lock {
   text-transform: uppercase;
   color: #3c54c0;
   letter-spacing: 1px;
-  margin-bottom: 15px;
+  margin: 0 0 0 20%;
 }
+.content img {
+  margin-left: calc(50% - 20px);
+  width: 25px;
+  height: 25px;
+  -webkit-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.active .accordeon-arrow {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .show-me:nth-child(n) {
   -webkit-transform: none;
       -ms-transform: none;

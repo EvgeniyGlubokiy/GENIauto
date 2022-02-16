@@ -11,15 +11,15 @@
    background-repeat: no-repeat;
 }
 
-.ibg img {
-   width: 0;
-   height: 0;
-   position: absolute;
-   top: 0;
-   left: 0;
-   opacity: 0;
-   visibility: hidden;
-}
+// .ibg img {
+//    width: 0;
+//    height: 0;
+//    position: absolute;
+//    top: 0;
+//    left: 0;
+//    opacity: 0;
+//    visibility: hidden;
+// }
 .page {
    position: absolute;
    width: 100%;
@@ -524,6 +524,7 @@
    padding: 1rem;
    align-items: center;
    min-height: 90px;
+   cursor: pointer;
    &__content {
       width: calc(50% - 2rem);
       min-width: 230px;
@@ -535,16 +536,21 @@
    }
 
    .content__accordeon {
-      // margin-top: 30px;
       display: none;
+      p {
+         font-size: 14px;
+         letter-spacing: 1px;
+      }
    }
 }
 
 .bead {
    position: absolute;
    display: block;
-   height: 1rem;
    width: 1rem;
+   height: 1rem;
+   font-size: 30px;
+   line-height: 45px;
    border-radius: 50%;
    background-color: #fff;
    box-shadow: 0px 0px 11px 3px $main-color;
@@ -555,17 +561,41 @@
 
 .content {
    margin-bottom: 30px;
-   // width: calc(50% - 2rem);
-   // min-width: 230px;
+   border-radius: 20px;
+   padding: 15px 15px 0px;
+   background-color: #fff;
+   position: relative;
+   span {
+      width: 50px;
+      padding-top: 5px;
+      height: 50px;
+      background-color: #3c54c0;
+      border-radius: 50%;
+      text-align: center;
+      font-family: "KronaOne";
+      font-size: 40px;
+      position: absolute;
+      top: calc(50% - 25px);
+      left: 20px;
+   }
    h2 {
       font-size: 18px;
       font-weight: 700;
       text-transform: uppercase;
       color: $main-color;
       letter-spacing: 1px;
-      margin-bottom: 15px;
+      margin: 0 0 0 20%;
    }
-   p {
+   img {
+      margin-left: calc(50% - 20px);
+      width: 25px;
+      height: 25px;
+      transition: 0.4s ease;
+   }
+}
+.active {
+   .accordeon-arrow {
+      transform: rotate(180deg);
    }
 }
 
