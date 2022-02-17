@@ -128,11 +128,6 @@ $('.icon-menu').click(function (event) {
 //accordeon====================
 $(document).ready(function () {
    $('.content').click(function () {
-      $(this).toggleClass('active').next().slideToggle(300);
+      $(this).toggleClass('accordeon__active').next().slideToggle(300);
    });
 });
-
-//
-   //    $('.accordeon-arrow').toggleClass('active');
-   //    // $('.content').toggleClass('-active');
-   //    $(this).next('.content__accordeon').slideToggle();

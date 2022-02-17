@@ -748,7 +748,7 @@ body._lock {
 .timeline {
   position: relative;
   min-height: 150px;
-  padding-bottom: 100px;
+  padding-bottom: 30px;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -863,11 +863,13 @@ body._lock {
 }
 
 .content {
-  margin-bottom: 30px;
   border-radius: 20px;
-  padding: 15px 15px 0px;
+  padding: 15px 60px 0px;
   background-color: #fff;
   position: relative;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 .content span {
   width: 50px;
@@ -880,7 +882,7 @@ body._lock {
   font-size: 40px;
   position: absolute;
   top: calc(50% - 25px);
-  left: 20px;
+  left: 10px;
 }
 .content h2 {
   font-size: 18px;
@@ -888,10 +890,10 @@ body._lock {
   text-transform: uppercase;
   color: #3c54c0;
   letter-spacing: 1px;
-  margin: 0 0 0 20%;
+  text-align: center;
 }
 .content img {
-  margin-left: calc(50% - 20px);
+  margin-left: calc(50% - 12.5px);
   width: 25px;
   height: 25px;
   -webkit-transition: 0.4s ease;
@@ -899,7 +901,10 @@ body._lock {
   transition: 0.4s ease;
 }
 
-.active .accordeon-arrow {
+.accordeon__active {
+  border-radius: 20px 20px 0px 0px;
+}
+.accordeon__active .accordeon-arrow {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -912,6 +917,26 @@ body._lock {
   opacity: 1;
 }
 
+.content__accordeon p {
+  background-color: #fff;
+  color: #000000;
+  border-radius: 0px 0px 20px 20px;
+  padding: 15px;
+  margin: -10px 0 0 0;
+}
+
+@media (max-width: 800px) {
+  .content span {
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    top: calc(50% - 20px);
+  }
+  .content h2 {
+    text-align: center;
+  }
+}
 @media (max-width: 550px) {
   .section {
     -webkit-box-align: start;
@@ -944,5 +969,10 @@ body._lock {
   }
   .timeline__title h2 span {
     color: #ffffff;
+  }
+}
+@media (max-width: 460px) {
+  .content h2 {
+    font-size: 13px;
   }
 }
