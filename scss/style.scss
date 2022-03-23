@@ -63,7 +63,7 @@
    }
 
    &__logo {
-      flex: 0 1 30%;
+      flex: 0 1 20%;
       font-family: "KronaOne";
       color: $main-color;
       font-size: 33px;
@@ -75,7 +75,7 @@
    }
    &__contact {
       display: flex;
-      flex: 0 1 30%;
+      flex: 0 1 40%;
       order: 2;
       justify-content: flex-end;
       img {
@@ -323,30 +323,30 @@
       left: 0;
       top: 0;
    }
-   &__text {
-      text-align: center;
-      color: white;
-      @include adaptive-value("margin-top", 200, 135, 0);
+   // &__text {
+   //    text-align: center;
+   //    color: white;
+   //    @include adaptive-value("margin-top", 200, 135, 0);
 
-      h1 {
-         width: fit-content;
-         margin: 0 auto;
-         font-size: 40px;
-         // font-size: 0px;
-         background-color: #000000e6;
+   //    h1 {
+   //       width: fit-content;
+   //       margin: 0 auto;
+   //       font-size: 40px;
+   //       // font-size: 0px;
+   //       background-color: #000000e6;
 
-         span {
-            font-family: "KronaOne";
-            color: $main-color;
-         }
-      }
-      h2 {
-         font-size: 40px;
-         margin: 0 auto;
-         background-color: #000000e6;
-         // width: fit-content;
-      }
-   }
+   //       span {
+   //          font-family: "KronaOne";
+   //          color: $main-color;
+   //       }
+   //    }
+   //    h2 {
+   //       font-size: 40px;
+   //       margin: 0 auto;
+   //       background-color: #000000e6;
+   //       // width: fit-content;
+   //    }
+   // }
 }
 //===================================
 
@@ -466,7 +466,7 @@
    margin: 0 auto;
    &__block {
       color: #ffffff;
-      background-color: #21201e;
+      background-color: $backgroundcolor;
    }
 
    &__title {
@@ -474,6 +474,7 @@
       margin-bottom: 40px;
       max-width: 800px;
       margin: 0px auto;
+      font-size: 16px;
       padding: 50px 0px 0px 0px;
       h2 {
          text-transform: uppercase;
@@ -675,7 +676,7 @@
 //why-we===================================
 
 .why-we {
-   background-color: #21201e;
+   background-color: $backgroundcolor;
    padding: 30px 0 30px 0;
    text-align: center;
    &__body {
@@ -687,6 +688,23 @@
          color: #fff;
          span {
             color: $main-color;
+         }
+      }
+      p {
+         color: #fff;
+         letter-spacing: 1px;
+         font-size: 20px;
+         font-weight: normal;
+         position: relative;
+         margin-top: 40px;
+         @media (max-width: 1100px) {
+            font-size: 18px;
+         }
+         @media (max-width: 800px) {
+            font-size: 16px;
+         }
+         @media (max-width: 550px) {
+            font-size: 14px;
          }
       }
    }
@@ -808,3 +826,147 @@
 }
 
 //===========================================
+
+// top-auto    =====================================
+.top-auto {
+   background-color: $backgroundcolor;
+   text-align: center;
+   padding-bottom: 40px;
+   &__body {
+   }
+
+   &__body-tittle {
+      span {
+         color: $main-color;
+      }
+      h2 {
+         font-size: 40px;
+         color: #ffffff;
+         text-transform: uppercase;
+      }
+   }
+
+   &__body-card {
+      margin-top: 50px;
+      display: grid;
+      grid-gap: 30px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      justify-content: center;
+   }
+   @media (max-width: 1200px) {
+      &__body-card {
+         grid-template-columns: repeat(2, 1fr);
+      }
+   }
+   @media (max-width: 550px) {
+      &__body-card {
+         grid-template-columns: 1fr;
+      }
+   }
+   .show-card {
+      margin: 30px 0px 30px 0px;
+      background-color: transparent;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: solid 2px $main-color;
+      box-shadow: 0px 0px 10px $main-color;
+      font-size: 40px;
+      line-height: 50px;
+      color: #ffffff;
+      text-align: center;
+      transition: 0.1s linear;
+      &:hover {
+         cursor: pointer;
+         box-shadow: 0px 0px 20px $main-color;
+         font-size: 50px;
+      }
+   }
+}
+.card-block {
+   &__auto-card {
+   }
+}
+.auto-card {
+   height: 400px;
+   // max-height: 400px;
+   // min-width: 100%;
+   background-color: #ffffff;
+   transition: 0.4s ease;
+   position: relative;
+   &:hover {
+      transform: scale(1.07);
+   }
+   &__img {
+      img {
+         width: 100%;
+      }
+   }
+   &__title {
+      h3 {
+         font-family: "KronaOne";
+         margin: 15px 0px 20px 0px;
+      }
+   }
+
+   &__content {
+      // padding: 0 5px 0 5px;
+      // width: 100%;
+   }
+
+   &__item {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+      li {
+         display: flex;
+         flex-direction: column;
+         margin-top: 25px;
+
+         span {
+            margin-top: 10px;
+            font-size: 16px;
+         }
+      }
+      img {
+         width: 25px;
+         height: 25px;
+         margin: 0 auto;
+      }
+   }
+   .auto-card__link {
+   }
+   .card-link {
+      bottom: 0;
+      left: 0;
+      line-height: 30px;
+      background-color: #3c54c0;
+      width: 100%;
+      font-family: "PTSans";
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #ffffff;
+      position: absolute;
+      padding-bottom: 10px;
+      &::before {
+         background-color: $main-color;
+         position: absolute;
+         top: -20px;
+         left: 0;
+         content: "";
+         height: 60%;
+         width: 100%;
+         clip-path: polygon(50% 0%, 100% 82%, 100% 100%, 0 100%, 0% 82%);
+      }
+   }
+   @media (max-width: 1200px) {
+      height: 530px;
+   }
+   @media (max-width: 850px) {
+      height: 400px;
+   }
+}
+//====================================

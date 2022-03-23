@@ -131,3 +131,21 @@ $(document).ready(function () {
       $(this).toggleClass('accordeon__active').next().slideToggle(300);
    });
 });
+
+
+
+let data = Array.from(document.querySelectorAll('.card-block .auto-card')),
+   step = 4,
+   item = 0;
+
+data.slice(step).forEach(e => e.style.display = 'none');
+item += step;
+
+document.querySelector('#more').addEventListener('click', function (e) {
+   let tmp = data.slice(item, item + step);
+   tmp.forEach(e => e.style.display = 'block');
+   item += step;
+
+   if (tmp.length < 4)
+      this.remove();
+});

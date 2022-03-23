@@ -41,7 +41,6 @@ body {
    color: #000;
    font-family: "PTSans";
    font-weight: 700;
-   overflow-x: hidden;
    &._lock {
       overflow: hidden;
    }
@@ -55,4 +54,10 @@ body {
 .wrapper {
    overflow: hidden;
    min-height: 100%;
+}
+button {
+   outline: none;
+   &:hover {
+      cursor: pointer;
+   }
 }
