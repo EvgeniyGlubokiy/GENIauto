@@ -1268,7 +1268,7 @@ button:hover {
   -webkit-box-shadow: 0px 0px 10px #3c54c0;
           box-shadow: 0px 0px 10px #3c54c0;
   font-size: 40px;
-  line-height: 50px;
+  line-height: 40px;
   color: #ffffff;
   text-align: center;
   -webkit-transition: 0.1s linear;
@@ -1280,6 +1280,7 @@ button:hover {
   -webkit-box-shadow: 0px 0px 20px #3c54c0;
           box-shadow: 0px 0px 20px #3c54c0;
   font-size: 50px;
+  line-height: 50px;
 }
 
 .auto-card {
