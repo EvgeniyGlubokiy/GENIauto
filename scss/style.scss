@@ -900,9 +900,9 @@
       transform: scale(1.07);
    }
    &__img {
-      img {
-         width: 100%;
-      }
+      background-position: center;
+      background-size: cover;
+      height: 190px;
    }
    &__title {
       h3 {
@@ -937,6 +937,30 @@
          margin: 0 auto;
       }
    }
+   .bg1 {
+      background-image: url(../img/img/car/tiguan.jpg);
+   }
+   .bg2 {
+      background-image: url(../img/img/car/rogue.jpg);
+   }
+   .bg3 {
+      background-image: url(../img/img/car/jeep-renegate.jpg);
+   }
+   .bg4 {
+      background-image: url(../img/img/car/ford-fusion.jpg);
+   }
+   .bg5 {
+      background-image: url(../img/img/car/bmw528.jpg);
+   }
+   .bg6 {
+      background-image: url(../img/img/car/fiat.jpg);
+   }
+   .bg7 {
+      background-image: url(../img/img/car/jeta.jpg);
+   }
+   .bg8 {
+      background-image: url(../img/img/car/dodge.jpeg);
+   }
    .auto-card__link {
    }
    .card-link {
@@ -964,7 +988,7 @@
       }
    }
    @media (max-width: 1200px) {
-      height: 530px;
+      height: 450px;
    }
    @media (max-width: 850px) {
       height: 400px;

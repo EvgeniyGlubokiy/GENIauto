@@ -1296,8 +1296,10 @@ button:hover {
       -ms-transform: scale(1.07);
           transform: scale(1.07);
 }
-.auto-card__img img {
-  width: 100%;
+.auto-card__img {
+  background-position: center;
+  background-size: cover;
+  height: 190px;
 }
 .auto-card__title h3 {
   font-family: "KronaOne";
@@ -1333,6 +1335,30 @@ button:hover {
   height: 25px;
   margin: 0 auto;
 }
+.auto-card .bg1 {
+  background-image: url(../img/img/car/tiguan.jpg);
+}
+.auto-card .bg2 {
+  background-image: url(../img/img/car/rogue.jpg);
+}
+.auto-card .bg3 {
+  background-image: url(../img/img/car/jeep-renegate.jpg);
+}
+.auto-card .bg4 {
+  background-image: url(../img/img/car/ford-fusion.jpg);
+}
+.auto-card .bg5 {
+  background-image: url(../img/img/car/bmw528.jpg);
+}
+.auto-card .bg6 {
+  background-image: url(../img/img/car/fiat.jpg);
+}
+.auto-card .bg7 {
+  background-image: url(../img/img/car/jeta.jpg);
+}
+.auto-card .bg8 {
+  background-image: url(../img/img/car/dodge.jpeg);
+}
 .auto-card .card-link {
   bottom: 0;
   left: 0;
@@ -1360,7 +1386,7 @@ button:hover {
 }
 @media (max-width: 1200px) {
   .auto-card {
-    height: 530px;
+    height: 450px;
   }
 }
 @media (max-width: 850px) {
