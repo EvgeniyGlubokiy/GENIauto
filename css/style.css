@@ -256,25 +256,11 @@ button:hover {
 }
 
 .ibg {
-  background-image: url(../img/img/car-6582567_1920.jpg);
+  background-image: url(../img/img/background/bg-main.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.page {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  background-attachment: fixed;
 }
 
 .header {
@@ -460,6 +446,7 @@ button:hover {
   letter-spacing: 0.5px;
   font-size: 14px;
   margin: 0px 13px 0px 13px;
+  position: relative;
 }
 .header .menu__list li:first-child {
   margin: 0px 13px 0px 0px;
@@ -479,11 +466,22 @@ button:hover {
   -o-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
 }
-.header .menu__link:hover {
-  color: #3c54c0;
-  -webkit-transition: 0.3s ease-in;
-  -o-transition: 0.3s ease-in;
-  transition: 0.3s ease-in;
+.header .menu__link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #3c54c0;
+  -webkit-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.header .menu__link:hover:after {
+  width: 100%;
+  left: 0;
+  top: 16px;
 }
 .header .menu__phone {
   display: none;
@@ -519,6 +517,9 @@ button:hover {
   .header .menu__list li {
     margin: 0px 0px 20px 30px !important;
     font-size: 20px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   .header .menu__list:after {
     content: "";
@@ -528,6 +529,11 @@ button:hover {
     position: absolute;
     top: -10%;
     right: 40%;
+  }
+  .header .menu__link:hover:after {
+    width: 100%;
+    left: 0;
+    top: 22px;
   }
   .header .menu__phone {
     display: -webkit-box;
@@ -613,17 +619,55 @@ button:hover {
 }
 
 .main-screen {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 100%;
-          flex: 1 0 100%;
-  position: relative;
+  width: 100%;
+  height: 100vh;
 }
 .main-screen__bg {
-  position: absolute;
   width: 100%;
   height: 100%;
-  left: 0;
-  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main-screen__text {
+  width: 70%;
+  text-align: center;
+  color: white;
+}
+.main-screen__text h1 {
+  padding: calc(15px + 20 * ((100vw - 320px) / 1120));
+  font-size: 50px;
+  background-color: #161822e6;
+}
+.main-screen__text h1 .color {
+  font-family: "KronaOne";
+  color: #3c54c0;
+  -webkit-text-stroke: 1px #3c54c0;
+}
+.main-screen__text h1 .transperent {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #ffffff;
+}
+.main-screen__text h1 span {
+  font-size: 50px;
+}
+@media (max-width: 900px) {
+  .main-screen__text {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .main-screen__text h1 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 400px) {
+  .main-screen__text h1 span {
+    font-size: 40px;
+  }
 }
 
 .benefits__row {
@@ -1392,5 +1436,93 @@ button:hover {
 @media (max-width: 850px) {
   .auto-card {
     height: 400px;
+  }
+}
+
+.electro {
+  background-image: url(../img/img/background/bg-electro.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 350px;
+}
+.electro__body {
+  min-height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.electro__content {
+  text-align: center;
+}
+.electro__content-title {
+  font-family: "PTSans";
+  font-weight: 700;
+  font-size: 60px;
+  color: #13d675;
+  margin-bottom: 30px;
+}
+.electro__content-text {
+  color: #ffffff;
+  letter-spacing: 1px;
+  font-weight: normal;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+.electro__content-link .link {
+  font-size: 25px;
+  letter-spacing: 0.5px;
+  color: #13d675;
+  border: solid 2px #13d675;
+  padding: 15px 30px;
+  margin-bottom: 50px;
+  -webkit-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+.electro__content-link .link:hover {
+  background-color: #13d675;
+  color: #ffffff;
+}
+@media (max-width: 1000px) {
+  .electro__content-title {
+    font-size: 45px;
+  }
+  .electro__content-text {
+    font-size: 30px;
+  }
+  .electro__content-link .link {
+    font-size: 20px;
+    padding: 12px 25px;
+  }
+}
+@media (max-width: 650px) {
+  .electro__content-title {
+    font-size: 35px;
+  }
+  .electro__content-text {
+    font-size: 25px;
+  }
+  .electro__content-link .link {
+    font-size: 18px;
+    padding: 10px 22px;
+  }
+}
+@media (max-width: 650px) {
+  .electro__content-title {
+    font-size: 28px;
+  }
+  .electro__content-text {
+    font-size: 22px;
+  }
+  .electro__content-link .link {
+    font-size: 16px;
+    padding: 8px 18px;
   }
 }
