@@ -1,0 +1,48 @@
+@import "var.scss";
+@import "fonts.scss";
+@import "mixin.scss";
+@import "null.scss";
+@import "popup.scss";
+
+
+//header============================
+.header {
+     &__logo {
+      .electro-logo{
+         color: $main-color-electro;
+         font-size: 25px;
+      }
+   }
+}
+//====================================
+
+//electric__prev======================
+.electric {
+   background-image: url(../img/img/background/bg-electro.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 100vh;
+   &__prev {
+      height: 100%;
+display: flex;
+align-items: center;
+   }
+
+   &__content {
+      flex: 1 0 50%;
+      color: #ffffff;
+   }
+
+   &__content-title {}
+
+   &__content-text {}
+
+   &__img {
+      flex: 1 0 50%;
+   }
+}
+
+
+
+//====================================

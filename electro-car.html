@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <title>GENIauto-электро</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header">
+         <div class="header__row container">
+            <nav class="header__menu menu">
+               <div class="menu__icon icon-menu">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </div>
+               <div class="menu__body">
+                  <ul class="menu__list">
+                     <li><a href="./index.html" class="menu__link">Главная</a></li>
+                     <li><a href="#" class="menu__link">О нас</a></li>
+                     <li><a href="#" class="menu__link">Сроки</a></li>
+                     <li><a href="#" class="menu__link">Электро</a></li>
+                     <li><a href="#" class="menu__link">Контакты</a></li>
+                  </ul>
+                  <div class="menu__phone">
+                     <a href="tel:+380956880631"> +38-095-68-80-631 </a>
+                     <a href="tel:+380508542278"> +38-050-85-42-278 </a>
+                  </div>
+                  <div class="menu__social">
+                     <a href="https://www.instagram.com/geni_auto.com.ua/?hl=ru" target="_blank">
+                        <img src="img/icon/instagram.svg" alt="instagram">
+                     </a>
+                     <a href="tg://resolve?domain=Eglubokiy">
+                        <img src="img/icon/telegram.svg" alt="telegram">
+                     </a>
+                  </div>
+               </div>
+            </nav>
+            <div class="header__logo">
+               <a href="./index.html" class="header__logo-link">GENI<span>auto</span>
+                  <span class="electro-logo">ELECTRIC</span>
+               </a>
+            </div>
+            <div class="header__contact">
+               <a href="#popup" class="header-button popup-link">
+                  <span>Сделать заказ</span>
+                  <img src="img/icon/order.svg" alt="">
+               </a>
+            </div>
+         </div>
+      </header>
+      <div id="popup" class="popup">
+         <div class="popup_body">
+            <div class="popup_content">
+               <a href="#heder" class="popup_close close-popup">
+                  <img src="img/icon/close.svg" alt="">
+               </a>
+               <div class="popup_title">
+                  <h2>Заполните форму для заказа</h2>
+               </div>
+               <div class="popup_form" id="popup_form" name="popup_form">
+                  <input type="text" class="form-field name" name="name" placeholder="Ваше имя" required>
+                  <input type="text" class="form-field phone" name="phone" placeholder="Телефон для связи" required>
+                  <textarea class="form-field-textarea" name="message" id="message" cols="30" rows="5"
+                     placeholder="Оставьте Ваш коментарий"></textarea>
+                  <button class="form-button">Отправить</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <main class="main">
+         <section class="electric">
+            <div class="electric__prev container">
+               <div class="electric__content ">
+                  <div class="electric__content-title">
+                     <h1>авто из китая</h1>
+                  </div>
+                  <div class="electric__content-text">
+                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, consequuntur officiis? Id
+                        ipsa, libero incidunt cupiditate natus voluptas, quam rerum deserunt tempore alias commodi,
+                        inventore eius maxime magni impedit at?</p>
+                  </div>
+               </div>
+               <div class="electric__img">
+                  <img src="img/img/background/electro-car.png" alt="">
+               </div>
+            </div>
+         </section>
+      </main>
+      <footer class="footer">
+         <div class="footer__content contact container">
+            <div class="contact__body">
+               <div class="contact__content column">
+                  <div class="column__left">
+                     <div class="column__left-title">
+                        <h3><span>Остались вопросы?</span> Заполните форму и мы с вами свяжемся.</h3>
+                     </div>
+                     <div class="column__left-content">
+                        <div class="footer__form" id="footer__form" name="footer__form">
+                           <input type="text" class="form-field name" name="name" placeholder="Ваше имя" required>
+                           <input type="text" class="form-field phone" name="phone" placeholder="Телефон для связи"
+                              required>
+                           <textarea class="form-field-textarea" name="message" id="message" cols="30" rows="5"
+                              placeholder="Оставьте Ваш коментарий"></textarea>
+                           <button class="form-button footet__button">Отправить</button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="column__right">
+                     <div class="column__right-title">
+                        <h3>Контакты</h3>
+                     </div>
+                     <div class="column__right-content">
+                        <div class="column__right-phone">
+                           <a href="tel:+380956880631"> +38-095-68-80-631 </a>
+                           <a href="tel:+380508542278"> +38-050-85-42-278 </a>
+                        </div>
+                        <div class="column__right-social">
+                           <a href="https://www.instagram.com/geni_auto.com.ua/?hl=ru" target="_blank">
+                              <img src="img/icon/instagram.svg" alt="instagram">
+                           </a>
+                           <a href="tg://resolve?domain=Eglubokiy">
+                              <img src="img/icon/telegram.svg" alt="telegram">
+                           </a>
+                        </div>
+                        <span> &copy; <span>GENI</span>auto 2020</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+   </div>
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+   <script src="js/script.js"></script>
+</body>
+
+</html>
