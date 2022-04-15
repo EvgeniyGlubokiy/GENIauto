@@ -49,7 +49,7 @@
    }
    &__logo-link {
       color: $main-color;
-      font-size: 33px;
+      // font-size: px;
       letter-spacing: 1px;
       
    }
@@ -494,6 +494,7 @@ font-size: 40px;
 
 // time-line==================================
 
+
 .timeline {
    position: relative;
    min-height: 150px;
@@ -887,6 +888,9 @@ font-size: 40px;
          font-size: 40px;
          color: #ffffff;
          text-transform: uppercase;
+         @media (max-width: 900px){
+            font-size: 25px;
+         }
       }
    }
 
@@ -1183,6 +1187,10 @@ font-size: 40px;
          font-size: 30px;
          text-align: center;
          margin-bottom: 30px;
+         text-transform: uppercase;
+         @media (max-width: 900px) {
+            font-size: 25px;
+         }
          span{
             color: $main-color;
          }
@@ -1208,6 +1216,10 @@ font-size: 40px;
          font-size: 30px;
          text-align: center;
          margin-bottom: 30px;
+         text-transform: uppercase;
+         @media (max-width: 900px) {
+            font-size: 25px;
+         }
          @media (max-width: 650px){
             margin: 30px;
          }

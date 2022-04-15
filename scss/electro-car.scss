@@ -45,8 +45,9 @@
       h1 {
          font-size: 40px;
          letter-spacing: 1px;
+         text-transform: uppercase;
          @media (max-width: 460px) {
-            font-size: 30px;
+            font-size: 25px;
          }
       }
       span{
@@ -134,11 +135,12 @@
          letter-spacing: 1px;
          margin-bottom: 40px;
          text-align: center;
+         text-transform: uppercase;
          span{
             color: $main-color;
          }
          @media (max-width: 900px) {
-            font-size: 30px;
+            font-size: 25px;
             margin-bottom: 25px;
          }
       }
