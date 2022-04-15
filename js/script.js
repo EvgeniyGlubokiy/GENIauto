@@ -119,6 +119,14 @@ $('.icon-menu').click(function (event) {
    $('.header__menu').toggleClass('flex');
    $('.header').toggleClass('active');
 });
+$('.menu__link').click(function (event) {
+   $('.menu__body').removeClass('active');
+   $('body').removeClass('_lock');
+   $('.header__contact').removeClass('_none');
+   $('.header__logo',).removeClass('flex');
+   $('.icon-menu').removeClass('active');
+   $('.header__menu').removeClass('flex');
+});
 
 //========================================
 
@@ -179,26 +187,5 @@ if (menuLinks.length > 0) {
       }
    }
 }
-
-// const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
-// if (menuLinks.length > 0) {
-//    menuLinks.forEach(menuLink => {
-//       menuLink.addEventListener("click", onMenuLinkClick);
-//    });
-
-//    function onMenuLinkClick(e) {
-//       const menuLink = e.target;
-//       if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
-//          const gotoBlock = document.querySelector(menuLink.dataset.goto);
-//          const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYoffset - document.querySelector('.header__row').offsetHeight;
-
-//          window.scrollTo({
-//             top: gotoBlockValue,
-//             behavior: "smooth"
-//          });
-//          e.preventDefault();
-//       }
-//    }
-// }
 
 //=====================================

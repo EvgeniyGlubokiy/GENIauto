@@ -4,11 +4,10 @@
 @import "null.scss";
 @import "popup.scss";
 
-
 //header============================
 .header {
-     &__logo {
-      .electro-logo{
+   &__logo {
+      .electro-logo {
          color: $main-color-electro;
          font-size: 25px;
       }
@@ -22,27 +21,190 @@
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
-   height: 100vh;
+   height: 80vh;
    &__prev {
       height: 100%;
-display: flex;
-align-items: center;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      @media (max-width: 800px) {
+         flex-direction: column;
+         justify-content: center;
+      }
    }
 
    &__content {
-      flex: 1 0 50%;
+      flex: auto 60%;
       color: #ffffff;
+      z-index: 2;
+      margin-bottom: -20px;
+      text-align: center;
    }
 
-   &__content-title {}
+   &__content-title {
+      h1 {
+         font-size: 40px;
+         letter-spacing: 1px;
+         @media (max-width: 460px) {
+            font-size: 30px;
+         }
+      }
+      span{
+         color: $main-color;
+      }
+   }
 
-   &__content-text {}
+   &__content-text {
+      font-size: 18px;
+      font-weight: normal;
+      margin-top: 15px;
+      @media (max-width: 460px) {
+         font-size: 16px;
+      }
+   }
 
    &__img {
-      flex: 1 0 50%;
+      width: 100%;
+      // padding-right: 30px;
+      flex: auto 100%;
+      text-align: center;
+      @media (max-width: 767px) {
+         display: none;
+      }
+      img {
+         @media (max-width: 800px) {
+            width: 70%;
+         }
+      }
+   }
+}
+//====================================
+
+// WHY China===========================
+
+.why-china {
+   padding: 50px 0px;
+   background-color: $backgroundcolor;
+}
+
+.benefit {
+   &__block {
+   }
+
+   &__block-img {
+      position: relative;
+      padding: 25px 0px 25px 25px;
+      margin-right: 20px;
+      z-index: 1;
+      flex: 1 0 30%;
+      @media (max-width: 767px) {
+         display: none;
+      }
+      &::before {
+         content: "";
+         background: $main-color-electro;
+         display: block;
+         height: 100%;
+         z-index: -1;
+         position: absolute;
+         width: 100%;
+         left: 0px;
+         top: 0px;
+      }
+      img {
+         width: 100%;
+      }
+   }
+
+   &__block-content {
+      display: flex;
+   }
+
+   &__block-right {
+      flex: 1 0 65%;
+      margin-left: 20px;
+      color: #ffffff;
+      @media (max-width: 767px) {
+         margin-left: 0px;
+      }
+   }
+   &__block-title {
+      h3 {
+         font-size: 40px;
+         letter-spacing: 1px;
+         margin-bottom: 40px;
+         text-align: center;
+         span{
+            color: $main-color;
+         }
+         @media (max-width: 900px) {
+            font-size: 30px;
+            margin-bottom: 25px;
+         }
+      }
+   }
+
+   &__block-text {
+      font-weight: normal;
+      letter-spacing: 1px;
+      font-size: 16px;
+
+      ul {
+         position: relative;
+         @media (max-width: 767px) {
+            ::after {
+               position: absolute;
+               left: 50%;
+               bottom: -40px;
+               content: "";
+               width: 75%;
+               height: 2px;
+               background-color: $main-color-electro;
+               transform: translateX(-50%);
+            }
+         }
+         li {
+            margin-bottom: 15px;
+
+            @media (max-width: 900px) {
+               font-size: 14px;
+               margin-bottom: 12px;
+            }
+
+            span {
+               color: $main-color-electro;
+            }
+         }
+      }
    }
 }
 
+//=====================================
 
+//top china=====================
 
-//====================================
+.bg9 {
+   background-image: url(../img/img/car/e-lavida.jpg);
+}
+.bg10 {
+   background-image: url(../img/img/car/e-bora.jpg);
+}
+.bg11{
+   background-image: url(../img/img/car/peugeot.jpg);
+}
+.bg12 {
+   background-image: url(../img/img/car/Audi_q2.jpg);
+}
+.bg13 {
+   background-image: url(../img/img/car/ID4.jpg);
+}
+.bg14 {
+   background-image: url(../img/img/car/hyundai.jpg);
+}
+.bg15 {
+   background-image: url(../img/img/car/hyundai.jpg);
+}
+.bg16 {
+   background-image: url(../img/img/car/volvo.jpg);
+}
+//================================
